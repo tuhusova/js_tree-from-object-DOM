@@ -29,7 +29,6 @@ function createTree(element, data) {
     li.textContent = key;
 
     if (data[key] !== null && typeof data[key] === 'object') {
-      li.textContent = data[key];
       createTree(li, data[key]);
     } else {
       li.textContent += `: ${data[key]}`;
